@@ -18,6 +18,8 @@
  * @author Ismet Zeki Yalniz
  */
 
+package edu.umass.ciir;
+
 import java.util.ArrayList;
 
 public class EditDistAligner {

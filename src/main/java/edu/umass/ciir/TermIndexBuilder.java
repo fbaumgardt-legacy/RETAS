@@ -18,6 +18,9 @@
  *
  * @author Ismet Zeki Yalniz
  */
+
+package edu.umass.ciir;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;

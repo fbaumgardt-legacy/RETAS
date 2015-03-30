@@ -18,6 +18,9 @@
  *
  * @author Ismet Zeki Yalniz
  */
+
+package edu.umass.ciir;
+
 public class IndexEntry {
 
     private String term;

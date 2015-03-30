@@ -14,6 +14,8 @@
  along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+package edu.umass.ciir;
+
 public class AlignedSequence {
 
     String m_reference;

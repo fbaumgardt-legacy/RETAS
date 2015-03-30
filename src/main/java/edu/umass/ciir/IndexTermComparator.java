@@ -14,31 +14,28 @@
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */ 
 
+package edu.umass.ciir;
+
+import java.util.Comparator;
+
 /**
  *
  * @author Ismet Zeki Yalniz
  */
 
-public class Stats {
-    long numOfMatches;
-    long ocrLength;
-    long gtLength;
-    
-    public Stats(long matches, long ocrlen, long gtlen ){
-        numOfMatches = matches;
-        ocrLength = ocrlen;
-        gtLength = gtlen;
-    }
-    public long getNumOfMatches(){
-        return numOfMatches;
-    }
-    public long getOcrLength(){
-        return ocrLength;
-    }
-    public long getGtLength(){
-        return gtLength;
-    }
-    public double getOCRAccuracy(){
-        return ((double)numOfMatches/gtLength);
+class IndexTermComparator implements Comparator<IndexEntry> {
+
+    // Comparator interface requires defining compare method.
+    public int compare(IndexEntry a, IndexEntry b) {
+        if (a.getFrequency() < b.getFrequency()) {
+            return -1;
+
+        } else if (a.getFrequency() > b.getFrequency()) {
+            return 1;
+
+        } else {
+           return a.getTerm().compareTo(b.getTerm());
+           //return 0;
+        }
     }
 }
